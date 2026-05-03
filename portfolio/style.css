@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fdf6f9, #fce4ec);
+    color: #333;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    color: #b76e79;
+}
+
+/* NAV */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #555;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #b76e79;
+}
+
+/* HERO */
+.hero {
+    height: 80vh;
+    background: url("images/bloemen.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    background: rgba(255,255,255,0.7);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+.overlay h2 {
+    font-size: 2rem;
+    color: #b76e79;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    width: 250px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* OVER MIJ */
+.content {
+    max-width: 700px;
+    margin: 80px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* BIJLEREN */
+.bijleren-container {
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+}
+
+.bijleren-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.doel {
+    margin-top: 20px;
+}
+
+.doel h3 {
+    color: #b76e79;
+    margin-bottom: 5px;
+}
+
+.doel p {
+    font-size: 0.95rem;
+}
+
+/* BEER */
+.beer {
+    width: 120px;
+    display: block;
+    margin: 30px auto 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ANIMATIE */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background: white;
+        width: 200px;
+        padding: 10px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .cards {
+        padding: 30px;
+    }
+}
